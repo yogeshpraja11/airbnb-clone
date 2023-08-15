@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import Image from "./Image.jsx";
+import ImageC from "./ImageC.jsx";
 
 export default function PlaceImg({place,index=0,className=null}) {
   if (!place.photos?.length) {
@@ -9,6 +9,6 @@ export default function PlaceImg({place,index=0,className=null}) {
     className = 'object-cover';
   }
   return (
-    <Image className={className} src={place.photos[index]} alt=""/>
+    <ImageC className={className} src={place.photos[index]} alt=""/>
   );
 }

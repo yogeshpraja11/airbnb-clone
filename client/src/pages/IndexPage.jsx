@@ -1,7 +1,7 @@
 import {useEffect, useState} from "react";
 import axios from "axios";
 import {Link} from "react-router-dom";
-import Image from "../components/Image";
+import ImageC from "../components/ImageC";
 
 export default function IndexPage() {
   const [places,setPlaces] = useState([]);
@@ -16,7 +16,7 @@ export default function IndexPage() {
         <Link key={place._id} to={'/place/'+place._id}>
           <div className="bg-gray-500 mb-2 rounded-2xl flex">
             {place.photos?.[0] && (
-              <Image className="rounded-2xl object-cover aspect-square" src={place.photos?.[0]} alt=""/>
+              <ImageC className="rounded-2xl object-cover aspect-square" src={place.photos?.[0]} alt=""/>
             )}
           </div>
           <h2 className="font-bold">{place.address}</h2>
