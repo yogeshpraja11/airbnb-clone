@@ -18,7 +18,7 @@ const app = express();
 
 const bcryptSalt = bcrypt.genSaltSync(10);
 const jwtSecret = 'fasefraw4r5r3wq45wdfgw34twdfg';
-const bucket = 'dawid-booking-app';
+const bucket = 'airbnb-clone-vercel';
 
 app.use(express.json());
 app.use(cookieParser());
@@ -30,7 +30,7 @@ app.use(cors({
 
 async function uploadToS3(path, originalFilename, mimetype) {
   const client = new S3Client({
-    region: 'us-east-1',
+    region: 'ap-south-1',
     credentials: {
       accessKeyId: process.env.S3_ACCESS_KEY,
       secretAccessKey: process.env.S3_SECRET_ACCESS_KEY,
